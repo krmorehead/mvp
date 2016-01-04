@@ -1,4 +1,7 @@
 <div id = 'container'>
-	<input type='text' value= 'enter a city'>
+	<input ng-model = "city" type='text' ng-init = "city = 'enter a city'">
+	<input ng-model = "state" type='text' ng-init = "state = 'enter a state/province'">
+	<input ng-model = "country" type='text' ng-init = "country = 'enter a country'">
+	<input ng-model = "milesRadius" type='text' ng-init = "milesRadius = 'enter a search radius(miles)'">
 	<button ng-click = "trailsRequest()">Submit</button>
 </div>

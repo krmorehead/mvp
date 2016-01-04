@@ -3,8 +3,10 @@ angular.module('hikingApp.root', [])
 .controller("RootController", function($scope, $http){
 	$scope.hello = "hi"
 
+
 	$scope.trailsRequest = function(){
 		console.log("request started")
+		console.log($scope.city, "city")
 
 		$http({
     method: "GET",
