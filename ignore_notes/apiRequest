@@ -1,0 +1,12 @@
+unirest.get("https://trailapi-trailapi.p.mashape.com/?
+limit=25&
+[activities_activity_type_name_eq]=hiking&q
+[city_cont]=Pleasanton&q
+[country_cont]=Untited States&q
+[state_cont]=California&
+radius=25")
+.header("X-Mashape-Key", "NMB9t3uVj0mshOMSkYMjILuKeDfip1MD8uYjsnNCCRXwjeridh")
+.header("Accept", "text/plain")
+.end(function (result) {
+  console.log(result.status, result.headers, result.body);
+});
