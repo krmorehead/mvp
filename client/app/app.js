@@ -1,14 +1,13 @@
-angular.module("hiking-master",[
-	"hiking-master.hiking-display",
-	"hiking-master.root",
+angular.module("hikingApp",[
+	"hikingApp.hiking-display",
+	"hikingApp.root",
 	"ngRoute"
 	])
+
 .config(function($routeProvider){
 	$routeProvider
-
-	.when("/", {
-		controller: "RootController",
-		templateUrl: "app/root/root.html"
-	})
-
+		.when("/", {
+			templateUrl: "app/root/root.html",
+			controller: "RootController",
+		})
 })
