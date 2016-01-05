@@ -6,6 +6,11 @@ li{
 	width: 70%;
 }
 
+h3{
+	text-align: center;
+	margin:0px, 5px, 0px, 5px;
+}
+
 #radius{
 	width: 25px
 }

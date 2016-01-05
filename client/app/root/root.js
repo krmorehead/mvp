@@ -7,9 +7,9 @@ angular.module('hikingApp.root', [])
 			$scope.trailsRequest()
 		}
 	}
+	
 
-
-	$scope.buildMap = function(latitude, longitude){
+	$scope.buildMap = function(latitude, longitude, domElement){
 
 	}
 

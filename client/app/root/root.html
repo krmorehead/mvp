@@ -15,19 +15,19 @@
 
 	<div ng-repeat = "trail in trails" class = "location">
 		<h4>{{trail.name}}</h4>
-		<div class = "map">
+
+		<div ng-show = "{{trail.lat}} || {{trail.lon}}" class = "map">
 			<ng-map zoom="13" center="{{[trail.lat, trail.lon]}}">
 				<marker position="{{[trail.lat, trail.lon]}}" />
 			</ng-map>
 		</div>
+		<div ng-show = "!{{trail.lat}} && !{{trail.lon}}" class = "map"><h3>Map Not Available</h3></div>
 			<ul>
 				
 				<li>{{trail.description || "No description available"}}</li>
 				
 				<p></p>
-
-				<li>Official site: <a href="{{trail.activities[0].url || ''}}">{{trail.activities[0].url || "No page 
-				is available"}}</a></li>
+				<li ng-show = "{{trail.activities[0]}}">Official site: <a href="{{trail.activities[0].url}}">{{trail.activities[0].url}}</a></li>
 			
 			</ul>
 	</div>
