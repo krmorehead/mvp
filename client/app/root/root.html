@@ -1,4 +1,11 @@
 <div id = 'container'>
+	<select ng-model = "activity">
+		<option value = "hiking">Hiking</option>
+		<option value = "mountain biking">Mountain Biking</option>
+		<option value = "campgrounds">Camping</option>
+		<option value = "ski resorts">Skiing</option>
+		<option value = "">Any</option>
+	</select>
 	<input ng-model = "city" type='text' ng-init = "city = 'San Francisco'">
 	<input ng-model = "state" type='text' ng-init = "state = 'California'">
 	<input ng-model = "country" type='text' ng-init = "country = 'United States'">
@@ -7,5 +14,15 @@
 
 	<div ng-repeat = "trail in trails">
 		<h4>{{trail.name}}</h4>
+			<ul>
+				
+				<li>{{trail.description || "No description available"}}</li>
+				
+				<p></p>
+
+				<li>Official site: <a href="{{trail.activities[0].url || ''}}">{{trail.activities[0].url || "No page 
+				is available"}}</a></li>
+			
+			</ul>
 	</div>
 </div>

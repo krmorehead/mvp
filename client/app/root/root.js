@@ -6,16 +6,21 @@ angular.module('hikingApp.root', [])
 
 	$scope.trailsRequest = function(){
 		console.log("starting request")
-
-		$http({
-    method: "GET",
-    url: "https://trailapi-trailapi.p.mashape.com/?" +
-    "limit=25" + "&q" +
-    "[activities_activity_type_name_eq]=hiking" + "&q"+
-    "[city_cont]=" + $scope.city + "&q" +
+		console.log($scope.activity)
+		var query = "https://trailapi-trailapi.p.mashape.com/?" +
+    "limit=25" + "&q" 
+    if($scope.activity){
+    	query += "[activities_activity_type_name_eq]=" + $scope.activity + "&q"
+    }
+    query += "[city_cont]=" + $scope.city + "&q" +
     "[country_cont]=" + $scope.country + "&q"+
     "[state_cont]=" + $scope.state + "&" +
     "radius=" + $scope.milesRadius, 
+
+
+		$http({
+    method: "GET",
+    url: query,
     headers: {
     	"X-Mashape-Key" : "NMB9t3uVj0mshOMSkYMjILuKeDfip1MD8uYjsnNCCRXwjeridh"
     },
@@ -25,12 +30,12 @@ angular.module('hikingApp.root', [])
  		}).success(function(data){
  			console.log("request complete")
  			console.log(data)
-			$scope.trails = data.places
+ 			if(data.places.length){
+ 				$scope.trails = data.places
+ 			} else {
+ 				$scope.trails = [{name : "No Activities found", description: " "}]
+ 			}
   	})
-	}
-
-	var displayTrails = function(data){
-		console.log(data)
 	}
 })
 
