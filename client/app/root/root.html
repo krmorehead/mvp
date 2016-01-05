@@ -1,19 +1,21 @@
-<div id = 'container'>
+<div id = 'container' ng-keyup="keyPress($event.keyCode)">
+	<span>Activity :</span>
 	<select ng-model = "activity">
 		<option value = "hiking">Hiking</option>
 		<option value = "mountain biking">Mountain Biking</option>
-		<option value = "campgrounds">Camping</option>
-		<option value = "ski resorts">Skiing</option>
+		<option value = "camping">Camping</option>
+		<option value = "snow sports">Skiing</option>
 		<option value = "">Any</option>
 	</select>
-	<input ng-model = "city" type='text' ng-init = "city = 'San Francisco'">
-	<input ng-model = "state" type='text' ng-init = "state = 'California'">
-	<input ng-model = "country" type='text' ng-init = "country = 'United States'">
-	<input ng-model = "milesRadius" type='text' ng-init = "milesRadius = '50'">
+	<p>City : <input ng-model = "city" type='text' ng-init = "city = 'San Francisco'"></p>
+	<p>State : <input ng-model = "state" type='text' ng-init = "state = 'California'"></p>
+	<p>Country : <input ng-model = "country" type='text' ng-init = "country = 'United States'"></p>
+	<p>Search Area (miles) : <input id = "radius" ng-model = "milesRadius" type='text' ng-init = "milesRadius = '50'"></p>
 	<button ng-click = "trailsRequest()">Submit</button>
 
-	<div ng-repeat = "trail in trails">
+	<div ng-repeat = "trail in trails" class = "location">
 		<h4>{{trail.name}}</h4>
+		<div class = "map"></div>
 			<ul>
 				
 				<li>{{trail.description || "No description available"}}</li>

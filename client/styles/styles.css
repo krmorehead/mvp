@@ -1,3 +1,25 @@
 ul {
     list-style-type: none;
 }
+
+li{
+	width: 70%;
+}
+
+#radius{
+	width: 25px
+}
+
+.map {
+	margin-right: 20px;
+	display: block;
+	float: right;
+	width : 200px;
+	height : 160px;
+	background-color : #CCC;
+}
+
+.location{
+	min-height : 180px;
+	margin-left: 20px;
+}
