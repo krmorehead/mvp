@@ -6,11 +6,32 @@ li{
 	width: 70%;
 }
 
+body{
+	background-image: url(../resources/imgs/the_ridge_1.jpg);
+	background-size:100%,100%;
+	background-attachment: fixed;
+}
+
 h3{
 	text-align: center;
 	margin:0px, 5px, 0px, 5px;
 }
 
+div.inputs{
+	margin-left: 20px;
+	width:300px;
+	background-color: #00b359;
+	border-radius: 5px;
+	opacity: .85;
+}
+
+#logo{
+	font-size: 40px;
+	font-weight: 800;
+	font-style: italic;	
+	color:lightblue;
+	text-shadow: 3px 3px black;
+}
 #radius{
 	width: 25px
 }
@@ -30,6 +51,9 @@ ng-map{
 }
 
 .location{
-	min-height : 180px;
+	background-color: #00b359;
+	border-radius: 5px;
+	opacity: .85;
+	min-height : 220px;
 	margin-left: 20px;
 }

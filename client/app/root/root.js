@@ -7,11 +7,6 @@ angular.module('hikingApp.root', [])
 			$scope.trailsRequest()
 		}
 	}
-	
-
-	$scope.buildMap = function(latitude, longitude, domElement){
-
-	}
 
 	$scope.trailsRequest = function(){
 		console.log("starting request")
@@ -38,10 +33,3 @@ angular.module('hikingApp.root', [])
   	})
 	}
 })
-// var mapCanvas = document.getElementById('map');
-// var mapOptions = {
-//       center: new google.maps.LatLng(44.5403, -78.5463),
-//       zoom: 8,
-//       mapTypeId: google.maps.MapTypeId.ROADMAP
-//     }
-// var map = new google.maps.Map(mapCanvas, mapOptions);
