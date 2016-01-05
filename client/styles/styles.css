@@ -10,8 +10,14 @@ li{
 	width: 25px
 }
 
+ng-map{
+	width:200px;
+	height: 160px;
+}
+
 .map {
-	margin-right: 20px;
+	margin-right: 20px;	
+	padding-bottom: 15px;
 	display: block;
 	float: right;
 	width : 200px;

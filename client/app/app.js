@@ -1,7 +1,8 @@
 angular.module("hikingApp",[
 	"hikingApp.hiking-display",
 	"hikingApp.root",
-	"ngRoute"
+	"ngRoute",
+	"ngMap"
 	])
 
 .config(function($routeProvider){
