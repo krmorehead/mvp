@@ -1,7 +1,11 @@
 <div id = 'container'>
-	<input ng-model = "city" type='text' ng-init = "city = 'enter a city'">
-	<input ng-model = "state" type='text' ng-init = "state = 'enter a state/province'">
-	<input ng-model = "country" type='text' ng-init = "country = 'enter a country'">
-	<input ng-model = "milesRadius" type='text' ng-init = "milesRadius = 'enter a search radius(miles)'">
+	<input ng-model = "city" type='text' ng-init = "city = 'San Francisco'">
+	<input ng-model = "state" type='text' ng-init = "state = 'California'">
+	<input ng-model = "country" type='text' ng-init = "country = 'United States'">
+	<input ng-model = "milesRadius" type='text' ng-init = "milesRadius = '50'">
 	<button ng-click = "trailsRequest()">Submit</button>
+
+	<div ng-repeat = "trail in trails">
+		<h4>{{trail.name}}</h4>
+	</div>
 </div>
