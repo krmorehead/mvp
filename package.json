@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon Server/server.js",
+    "start": "bower install; nodemon Server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
