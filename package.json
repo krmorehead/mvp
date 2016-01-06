@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "http-server": "^0.8.5",
-    "angular-google-maps": "~2.2.1"
+    "angular-google-maps": "~2.2.1",
+    "express": "~4.13.3",
+    "nodemon": "~1.8.1"
   },
   "devDependencies": {},
   "scripts": {
