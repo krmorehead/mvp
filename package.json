@@ -4,11 +4,11 @@
   "description": "hiking master",
   "main": "index.js",
   "dependencies": {
-    "http-server": "^0.8.5",
     "angular-google-maps": "~2.2.1",
+    "bower": "1.6.5",
     "express": "~4.13.3",
-    "nodemon": "~1.8.1",
-    "bower": "1.6.5"
+    "http-server": "^0.8.5",
+    "nodemon": "~1.8.1"
   },
   "devDependencies": {},
   "scripts": {
