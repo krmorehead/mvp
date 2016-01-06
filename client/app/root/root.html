@@ -14,22 +14,24 @@
 		<p>Search Area (miles) : <input id = "radius" ng-model = "milesRadius" type='text' ng-init = "milesRadius = '50'"></p>
 		<button ng-click = "trailsRequest()">Submit</button>
 	</div>
+	<div class = 'spacewaster'></div>
 
 	<div ng-repeat = "trail in trails" class = "location">
 		<h2>{{trail.name}}</h2>
-
-		<div ng-show = "{{trail.lat}} || {{trail.lon}}" class = "map">
-			<ng-map zoom="13" center="{{[trail.lat, trail.lon]}}">
-				<marker position="{{[trail.lat, trail.lon]}}" />
-			</ng-map>
+		<div class = 'info'>
+			<div ng-show = "{{trail.lat}} || {{trail.lon}}" class = "map">
+				<ng-map zoom="13" center="{{[trail.lat, trail.lon]}}">
+					<marker position="{{[trail.lat, trail.lon]}}" />
+				</ng-map>
+			</div>
+			<div ng-show = "!{{trail.lat}} && !{{trail.lon}}" class = "map"><h3>Map Not Available</h3></div>
+				<ul>
+					
+					<li>{{trail.description || "No description available"}}</li>
+					
+					<p></p>
+					<li ng-show = "{{trail.activities[0]}}">Official site: <a href="{{trail.activities[0].url}}">{{trail.activities[0].url}}</a>/n</li>
+				</ul>
 		</div>
-		<div ng-show = "!{{trail.lat}} && !{{trail.lon}}" class = "map"><h3>Map Not Available</h3></div>
-			<ul>
-				
-				<li>{{trail.description || "No description available"}}</li>
-				
-				<p></p>
-				<li ng-show = "{{trail.activities[0]}}">Official site: <a href="{{trail.activities[0].url}}">{{trail.activities[0].url}}</a>/n</li>
-			</ul>
 	</div>
 </div>
