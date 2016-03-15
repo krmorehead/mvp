@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:3000/#/stream -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+	<meta charset="utf-8">
+	<title>Greenfield</title>
+</head>
+<body><script type="text/javascript" id="www-widgetapi-script" src="./Greenfield_files/www-widgetapi.js" async=""></script><script src="./Greenfield_files/iframe_api"></script><script type="text/javascript" id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.1.9.2.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+//]]></script><script async="" src="./Greenfield_files/browser-sync-client.1.9.2.js"></script>
+	<h1>Greenfield</h1>
+	<!-- ngView:  --><div ng-view="" class="ng-scope"><div class="ng-scope">
+	<div ng-show="!inRoom" class="ng-hide">
+		<input ng-model="url" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+		<button ng-click="inRoom = !inRoom; submitUrl(url);">Submit</button>
+		<p ng-click="inRoom = !inRoom; joinStream(&#39;U0315DUM6Cg&#39;)">Click me</p>
+	</div>
+
+	<!-- where the player gets attached to the DOM -->
+  <iframe id="player" frameborder="0" allowfullscreen="1" title="YouTube video player" width="600" height="400" src="./Greenfield_files/U0315DUM6Cg.html"></iframe>
+
+	<div ng-show="inRoom" class="">
+		<h4>Messanger</h4>
+		<input class="messanger ng-valid ng-dirty ng-touched" ng-model="message" ng-keyup="submitMessage($event.keyCode)"> 
+
+		<!-- ngRepeat: message in messages --><p ng-repeat="message in messages" class="ng-binding ng-scope">Bob says: Not much</p><!-- end ngRepeat: message in messages --><p ng-repeat="message in messages" class="ng-binding ng-scope">Not Bob says: sup</p><!-- end ngRepeat: message in messages -->
+	</div>
+  
+  <script>
+
+  </script>
+</div></div>
+	<div ng-controller="appController" class="ng-scope"></div>
+
+	<!-- dependancies -->
+	<script src="./Greenfield_files/angular.js"></script>
+	<script src="./Greenfield_files/angular-route.js"></script>
+	<script src="./Greenfield_files/socket.io.js"></script>
+	<script src="./Greenfield_files/angular-route.js"></script>
+
+	<!-- app scripts -->
+	<script src="./Greenfield_files/app.js"></script>
+	<script src="./Greenfield_files/stream.js"></script>
+	<script src="./Greenfield_files/services.js"></script>
+	<script src="./Greenfield_files/appRoutes.js"></script>
+	<script src="./Greenfield_files/login.js"></script>
+
+<div id="__bs_notify__" style="display: none; padding: 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; right: 0px; top: 0px; border-bottom-left-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);">Connected to BrowserSync</div></body></html>
