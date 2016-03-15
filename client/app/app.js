@@ -1,5 +1,4 @@
 angular.module("hikingApp",[
-	"hikingApp.hiking-display",
 	"hikingApp.root",
 	"ngRoute",
 	"ngMap"

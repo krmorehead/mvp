@@ -8,12 +8,14 @@
 			<option value = "snow sports">Skiing</option>
 			<option value = "">Any</option>
 		</select>
+
 		<p>City : <input ng-model = "city" type='text' ng-init = "city = 'San Francisco'"></p>
 		<p>State : <input ng-model = "state" type='text' ng-init = "state = 'California'"></p>
 		<p>Country : <input ng-model = "country" type='text' ng-init = "country = 'United States'"></p>
 		<p>Search Area (miles) : <input id = "radius" ng-model = "milesRadius" type='text' ng-init = "milesRadius = '50'"></p>
 		<button ng-click = "trailsRequest()">Submit</button>
 	</div>
+
 	<div class = 'spacewaster'></div>
 
 	<div ng-repeat = "trail in trails" class = "location">
